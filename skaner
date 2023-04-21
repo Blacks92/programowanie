@@ -1,0 +1,39 @@
+package com.company;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Integer> counts = new HashMap<String, Integer>();
+        File file = new File("NAPIS.txt");
+        if (!file.exists()) {
+            System.out.println("Nie można odnaleźć pliku NAPIS.txt");
+            return;
+        }
+        try {
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (counts.containsKey(line)) {
+                    counts.put(line, counts.get(line) + 1);
+                } else {
+                    counts.put(line, 1);
+                }
+            }
+            scanner.close();
+        } catch (Exception e) {
+            System.out.println("Wystąpił błąd podczas przetwarzania pliku NAPIS.txt");
+            return;
+        }
+
+        for (Map.Entry<String, Integer> entry : counts.entrySet()) {
+            String key = entry.getKey();
+            int count = entry.getValue();
+            if (count > 1) {
+                System.out.println(key);
+            }
+        }
+    }
+}
