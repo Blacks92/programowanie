@@ -1,0 +1,85 @@
+public class Ksiazka {
+    private String tytul;
+    private String autor;
+    private int rokWydania;
+    private String wydawnictwo;
+    private int liczbaStron;
+    private double cena;
+
+    public Ksiazka(String tytul, String autor) {
+        this.tytul = tytul;
+        this.autor = autor;
+    }
+
+    public Ksiazka(String tytul, String autor, int rokWydania, String wydawnictwo) {
+        this.tytul = tytul;
+        this.autor = autor;
+        this.rokWydania = rokWydania;
+        this.wydawnictwo = wydawnictwo;
+    }
+
+    public Ksiazka(String tytul, String autor, int rokWydania, String wydawnictwo, int liczbaStron, double cena) {
+        this.tytul = tytul;
+        this.autor = autor;
+        this.rokWydania = rokWydania;
+        this.wydawnictwo = wydawnictwo;
+        this.liczbaStron = liczbaStron;
+        this.cena = cena;
+    }
+
+    public String getTytul() {
+        return tytul;
+    }
+
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getRokWydania() {
+        return rokWydania;
+    }
+
+    public void setRokWydania(int rokWydania) {
+        this.rokWydania = rokWydania;
+    }
+
+    public String getWydawnictwo() {
+        return wydawnictwo;
+    }
+
+    public void setWydawnictwo(String wydawnictwo) {
+        this.wydawnictwo = wydawnictwo;
+    }
+
+    public int getLiczbaStron() {
+        return liczbaStron;
+    }
+
+    public void setLiczbaStron(int liczbaStron) {
+        this.liczbaStron = liczbaStron;
+    }
+
+    public double getCena() {
+        return cena;
+    }
+
+    public void setCena(double cena) {
+        this.cena = cena;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Ksiazka ksiazka1 = new Ksiazka("Wiedźmin", "Andrzej Sapkowski");
+        Ksiazka ksiazka2 = new Ksiazka("Ogniem i Mieczem", "Henryk Sienkiewicz", 1884, "Gebethner i Wolff");
+        Ksiazka ksiazka3 = new Ksiazka("Hobbit, czyli tam i z powrotem", "J.R.R. Tolkien", 1937, "George Allen & Unwin", 310, 39.99);
+        Ksiazka ksiazka4 = new Ksiazka("Duma i uprzedzenie", "Jane Austen", 1813, "T. Egerton");
+        Ksiazka ksiazka5 = new Ksiazka("Harry Potter i Kamień Filozoficzny", "J.K. Rowling", 
